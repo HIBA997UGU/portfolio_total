@@ -58,7 +58,7 @@ font_small = pygame.font.SysFont('Lucida Sans', 20)
 font_big = pygame.font.SysFont('Lucida Sans', 24)
 
 #load images
-jumpy_image = pygame.image.load(os.path.join(os.path.dirname(__file__), 'assets/jump.png')).convert_alpha()
+jumpy_image = pygame.image.load(os.path.join(os.path.dirname(__file__), 'assets/jump.jpg')).convert_alpha()
 bg_image = pygame.image.load(os.path.join(os.path.dirname(__file__), 'assets/bg.png')).convert_alpha()
 platform_image = pygame.image.load(os.path.join(os.path.dirname(__file__), 'assets/wood.png')).convert_alpha()
 #bird spritesheet
