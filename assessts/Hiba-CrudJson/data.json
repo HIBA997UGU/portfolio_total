@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "livre": "La Boite à Merveilles",
+        "emprunteur": "Rissala",
+        "date": "2025-05-21"
+    },
+    {
+        "id": 2,
+        "livre": "Le Petit Prince",
+        "emprunteur": "abcdef",
+        "date": "2025-05-16"
+    }
+]

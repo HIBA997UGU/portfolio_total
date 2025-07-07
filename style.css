@@ -1,0 +1,257 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.accent {
+    color: #6e48aa;
+}
+
+/* Navigation */
+nav {
+    background-color: #1e1e1e;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #6e48aa;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background: #6e48aa;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #4b2e7a;
+}
+
+/* Sections */
+section {
+    padding: 4rem 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Projects Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    padding: 0 1rem 1rem;
+    color: #b0b0b0;
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #252525;
+}
+
+.project-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.project-links a:hover {
+    color: #6e48aa;
+}
+
+/* Skills */
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skill {
+    text-align: center;
+    background: #1e1e1e;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 120px;
+    transition: transform 0.3s;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+.skill i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #6e48aa;
+}
+
+/* Contact */
+.contact-info {
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.contact-info a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #6e48aa;
+}
+/* Mode clair */
+body.light-mode {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+body.light-mode nav,
+body.light-mode .project-card,
+body.light-mode .skill,
+body.light-mode footer {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Bouton thème */
+.theme-toggle {
+    background: transparent;
+    border: none;
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+body.light-mode .theme-toggle {
+    color: #333;
+}
+
+/* Filtres de projets */
+.project-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    background: #6e48aa;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background: #4b2e7a;
+}
+/* Footer */
+footer {
+    background: #1e1e1e;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
