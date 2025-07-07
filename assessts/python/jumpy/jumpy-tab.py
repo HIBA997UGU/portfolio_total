@@ -191,7 +191,7 @@ enemy_group = pygame.sprite.Group()
 #create starting platform
 platform = Platform(SCREEN_WIDTH // 2 - 50, SCREEN_HEIGHT - 50, 100, False)
 platform_group.add(platform)
-last_platform_y = platform.rect.y  # Track last platform y position
+
 
 #game loop
 run = True
@@ -211,7 +211,7 @@ while run:
 		if len(platform_group) < MAX_PLATFORMS:
 			p_w = random.randint(40, 60)
 			p_x = random.randint(0, SCREEN_WIDTH - p_w)
-			p_y = last_platform_y - random.randint(80, 120)
+			p_y =platform.rect.y - random.randint(80, 120)
 			p_type = random.randint(1, 2)
 			if p_type == 1 and score > 500:
 				p_moving = True
@@ -219,8 +219,7 @@ while run:
 				p_moving = False
 			platform = Platform(p_x, p_y, p_w, p_moving)
 			platform_group.add(platform)
-			last_platform_y = p_y  # Update last platform y position
-			platform_group.add(platform)
+
 
 		#update platforms
 		platform_group.update(scroll)
