@@ -183,11 +183,11 @@
             border-radius: 2px;
         }
 
-        /* Section À Propos */
+        /* Section À Propos - MODIFIÉE */
         .about-content {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             flex-wrap: wrap;
             gap: 3rem;
         }
@@ -206,7 +206,7 @@
             margin-bottom: 1rem;
         }
 
-        .about-downloads {
+        .about-info {
             flex: 1;
             min-width: 300px;
             background: var(--white);
@@ -215,38 +215,62 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
-        .about-downloads h3 {
+        .about-info h3 {
             margin-bottom: 1.5rem;
             text-align: center;
-        }
-
-        .report-list {
-            list-style: none;
-            margin-top: 1.5rem;
-        }
-
-        .report-list li {
-            margin-bottom: 1rem;
-        }
-
-        .report-list a {
-            color: var(--primary-color);
-            font-weight: 500;
-            transition: color 0.3s;
-            display: flex;
-            align-items: center;
-        }
-
-        .report-list a:hover {
             color: var(--secondary-color);
         }
 
-        .report-list i {
-            margin-right: 10px;
-            font-size: 1.2rem;
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
         }
 
-        /* Section Compétences */
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        /* Section Formation - AJOUTÉE */
+        .formation {
+            background-color: var(--light-color);
+        }
+
+        .formation-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .formation-item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .formation-year {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .formation-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+
+        /* Section Compétences - MODIFIÉE */
         .skills {
             background-color: var(--light-color);
         }
@@ -255,6 +279,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
+            margin-bottom: 3rem;
         }
 
         .skill-card {
@@ -278,6 +303,40 @@
 
         .skill-card h3 {
             margin-bottom: 1rem;
+        }
+
+        /* Nouveau: Outils */
+        .tools-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .tools-title {
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tool-item {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .tool-item i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
         }
 
         /* Barres de compétences */
@@ -542,10 +601,11 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="logo">MonPortfolio</div>
+        <div class="logo">Marzak Hiba</div>
         <ul class="nav-links">
             <li><a href="#accueil">Accueil</a></li>
             <li><a href="#apropos">À Propos</a></li>
+            <li><a href="#formation">Formation</a></li>
             <li><a href="#competences">Compétences</a></li>
             <li><a href="#projets">Projets</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -561,50 +621,79 @@
     <section id="accueil" class="hero">
         <div class="hero-content">
             <h1>Bonjour, je suis <span style="color: var(--primary-color);">Marzak Hiba</span></h1>
-            <h2>Stagiaire en Développement Digital</h2>
-            <p>Passionnée par la création de solutions web modernes et fonctionnelles. Actuellement en première année de formation, je maîtrise HTML, CSS, JavaScript, Python et PHP.</p>
+            <h2>Stagiaire en Développement Full Stack</h2>
+            <p>Passionnée par la création de solutions web modernes et fonctionnelles. Actuellement en formation à l'OFPPT NTIC 2, je maîtrise HTML, CSS, JavaScript, Python et PHP. Je recherche un stage de fin d'études (PFE) pour développer mes compétences techniques et acquérir une expérience professionnelle concrète.</p>
             <a href="#apropos" class="btn">En savoir plus</a>
         </div>
     </section>
 
-    <!-- Section À Propos -->
+    <!-- Section À Propos - MODIFIÉE -->
     <section id="apropos" class="about">
         <h2 class="section-title">À Propos de Moi</h2>
         <div class="about-content">
             <div class="about-text">
                 <h2>Qui suis-je?</h2>
-                <p>Je suis une stagiaire en première année de développement digital en OFPPT NTIC 2 SIDI MAAROUF, passionnée par la création de solutions web modernes et fonctionnelles. Mon parcours académique et mes projets personnels m'ont permis d'acquérir des compétences solides en développement web et en programmation.</p>
-                <p>Actuellement en formation, je cherche à mettre en pratique mes connaissances et à continuer d'apprendre dans un environnement professionnel stimulant.</p>
+                <p>Stagiaire en développement digital à OFPPT NTIC 2 (Sidi Maarouf) passionnée par le web, créative et organisée. Je maîtrise plusieurs technologies front-end et back-end, et je suis capable de travailler en équipe, gérer mon temps et apprendre rapidement pour développer des solutions modernes et fonctionnelles.</p>
+                <p>Je suis actuellement à la recherche d'un stage de fin d'études (PFE) afin de développer mes compétences techniques et acquérir une expérience professionnelle concrète.</p>
                 <p>En dehors du code, j'aime participer à des hackathons, suivre les dernières tendances technologiques et partager mes connaissances avec d'autres développeurs débutants.</p>
             </div>
-            <div class="about-downloads">
-                <a href="cv.pdf" class="btn" download>
-                    <i class="fas fa-download"></i> Télécharger mon CV
-                </a>
-                
-                <h3>Mes Rapports </h3>
-                <ul class="report-list">
-                    <li>
-                        <a href="assessts/pdf/Définition du Collection en python.docx" download>
-                            <i class="far fa-file-pdf"></i> Rapport sur Définition du Collection en python (WORD)
-                        </a>
-                    </li>
-                    <li>
-                        <a href="assessts/pdf/rawaa et hiba.docx" download>
-                            <i class="far fa-file-pdf"></i> Rapport sur Package en POO  (WORD)
-                        </a>
-                    </li>
-                    <li>
-                        <a href="assessts/pdf/ListeboxX[1] [Enregistrement automatique].pptx" download>
-                            <i class="far fa-file-pdf"></i> Présentation POO Tkinter  (PPTX)
-                        </a>
-                    </li>
-                </ul>
+            <div class="about-info">
+                <h3>Informations Personnelles</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">Date de naissance:</span>
+                        <span>08-02-2005</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Nationalité:</span>
+                        <span>Marocaine</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Téléphone:</span>
+                        <span>+212 775-641-201</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Email:</span>
+                        <span>marzakhiba80@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Adresse:</span>
+                        <span>Hay Najah Bloc I N°41, Sidi Maarouf, Casablanca</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">LinkedIn:</span>
+                        <span><a href="https://tinyurl.com/ntuSyfc2" target="_blank" style="color: var(--primary-color);">Mon profil</a></span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Compétences -->
+    <!-- Section Formation - AJOUTÉE -->
+    <section id="formation" class="formation">
+        <h2 class="section-title">Formation</h2>
+        <div class="formation-timeline">
+            <div class="formation-item">
+                <div class="formation-year">2024 - Présent</div>
+                <div class="formation-title">OFPPT NTIC 2 – Développement Digital</div>
+                <p>Formation en cours en développement digital, spécialisation full stack.</p>
+            </div>
+            
+            <div class="formation-item">
+                <div class="formation-year">2022 - 2024</div>
+                <div class="formation-title">Faculté des Sciences – Ain Chock</div>
+                <p>Deux années d'études universitaires.</p>
+            </div>
+            
+            <div class="formation-item">
+                <div class="formation-year">2021 - 2022</div>
+                <div class="formation-title">Baccalauréat mention Bien – Filière Physique</div>
+                <p>Baccalauréat obtenu avec mention Bien, filière Physique à Casablanca.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences - MODIFIÉE -->
     <section id="competences" class="skills">
         <h2 class="section-title">Mes Compétences</h2>
         <div class="skills-container">
@@ -624,6 +713,11 @@
                 <p>Développement d'interactions dynamiques et manipulation du DOM.</p>
             </div>
             <div class="skill-card">
+                <i class="fab fa-react"></i>
+                <h3>React</h3>
+                <p>Développement d'applications web modernes avec React.</p>
+            </div>
+            <div class="skill-card">
                 <i class="fab fa-python"></i>
                 <h3>Python</h3>
                 <p>Programmation orientée objet, scripts et automatisation.</p>
@@ -640,11 +734,43 @@
             </div>
         </div>
 
+        <!-- Section Outils - AJOUTÉE -->
+        <div class="tools-container">
+            <h3 class="tools-title">Outils</h3>
+            <div class="tools-grid">
+                <div class="tool-item">
+                    <i class="fas fa-code"></i>
+                    <h4>Visual Studio Code</h4>
+                    <p>Très bon niveau</p>
+                </div>
+                <div class="tool-item">
+                    <i class="fas fa-file-word"></i>
+                    <h4>Microsoft Word</h4>
+                    <p>Très bon niveau</p>
+                </div>
+                <div class="tool-item">
+                    <i class="fas fa-server"></i>
+                    <h4>XAMPP</h4>
+                    <p>Bon niveau</p>
+                </div>
+                <div class="tool-item">
+                    <i class="fas fa-palette"></i>
+                    <h4>Canva</h4>
+                    <p>Bon niveau</p>
+                </div>
+                <div class="tool-item">
+                    <i class="fas fa-file-excel"></i>
+                    <h4>Microsoft Excel</h4>
+                    <p>Bon niveau</p>
+                </div>
+            </div>
+        </div>
+
         <div class="skills-bars">
             <div class="skill">
                 <div class="skill-info">
                     <span>HTML/CSS</span>
-                    <span>90%</span>
+                    <span>85%</span>
                 </div>
                 <div class="skill-bar">
                     <div class="skill-progress" style="width: 85%"></div>
@@ -661,8 +787,17 @@
             </div>
             <div class="skill">
                 <div class="skill-info">
+                    <span>React</span>
+                    <span>50%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 50%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-info">
                     <span>Python</span>
-                    <span>85%</span>
+                    <span>80%</span>
                 </div>
                 <div class="skill-bar">
                     <div class="skill-progress" style="width: 80%"></div>
@@ -680,7 +815,7 @@
             <div class="skill">
                 <div class="skill-info">
                     <span>SQL</span>
-                    <span>85%</span>
+                    <span>75%</span>
                 </div>
                 <div class="skill-bar">
                     <div class="skill-progress" style="width: 75%"></div>
@@ -705,7 +840,7 @@
             <div class="project-card" data-category="web">
                 <img src="assessts/image_/site_ams.png" alt="Projet 1" class="project-img">
                 <div class="project-info">
-                    <h3> Site_rapport de Stage SONARGES</h3>
+                    <h3> Site rapport de Stage SONARGES</h3>
                     <p>Ce site présente le rapport de stage d'une stagiaire, éducatrice sportive chez SONARGES (Société Nationale de Réalisation et de Gestion des Équipements Sportifs). Il offre une lecture structurée et interactive du rapport, mettant en valeur les missions réalisées, les compétences acquises et les réflexions personnelles.</p>
                     <div class="project-links">
                         <a href="https://hiba997ugu.github.io/site_ams/"><i class="fas fa-external-link-alt"></i> Voir en ligne</a>
@@ -718,7 +853,7 @@
                 <img src="assessts/image_/site_statique.png" alt="Projet 1" class="project-img">
                 <div class="project-info">
                     <h3>Site H&N</h3>
-                    <p>Site 'un site e-commerce de vêtements appelé "H&N". Il présente une interface complète avec navigation, présentation des produits et fonctionnalités interactives, avec HTML, CSS et JavaScript.</p>
+                    <p>Site e-commerce de vêtements appelé "H&N". Il présente une interface complète avec navigation, présentation des produits et fonctionnalités interactives, avec HTML, CSS et JavaScript.</p>
                     <div class="project-links">
                         <a href="https://hiba997ugu.github.io/portfolio/"><i class="fas fa-external-link-alt"></i> Voir en ligne</a>
                         
@@ -745,7 +880,7 @@
                     <h3>application calcul </h3>
                     <p> Cette application est une calculatrice graphique développée en Python avec la bibliothèque Tkinter. Elle offre une interface utilisateur intuitive pour effectuer des opérations mathématiques de base. </p>
                     <div class="project-links">
-                        <a href="assessts/python/game_calcul.zip"><i class="fas fa-external-link-alt"></i> Voir demo</a>
+                        <a href="assessts/python/game_calcul/app_calcul.exe"><i class="fas fa-external-link-alt"></i> Voir demo</a>
                     </div>
                 </div>
             </div>
@@ -756,7 +891,7 @@
                     <h3>jeux Tic-Tac-Toe</h3>
                     <p>Ce fichier contient un jeu de Tic-Tac-Toe (Morpion) implémenté en Python. Le jeu permet à un joueur humain de jouer contre l'ordinateur.</p>
                     <div class="project-links">
-                        <a href="assessts/python/jeux_tic_toc.zip"><i class="fas fa-external-link-alt"></i> Voir demo</a>
+                        <a href="assessts/python/jeux_tic_toc/jeux_tic_toc.exe"><i class="fas fa-external-link-alt"></i> Voir demo</a>
                     </div>
                 </div>
             </div>
@@ -780,7 +915,7 @@
                     <h3>jeux Serpent</h3>
                     <p>Contrôler un serpent qui grandit en mangeant de la nourriture (blocs rouges) sans toucher les bords de l'écran ou son propre corps.</p>
                     <div class="project-links">
-                        <a href="assessts/python/jeux_serpent.zip"><i class="fas fa-external-link-alt"></i> Voir démo</a>
+                        <a href="assessts/python/jeux_serpent/jeux_serpent.exe"><i class="fas fa-external-link-alt"></i> Voir démo</a>
   
                     </div>
                 </div>
@@ -792,26 +927,54 @@
                     <h3>jeux_devinette</h3>
                     <p>Deviner un nombre aléatoire entre 1 et 100 en un minimum d'essais, en utilisant les indications "trop haut" ou "trop bas".</p>
                     <div class="project-links">
-                        <a href="assessts/python/jeux_devinette.zip"><i class="fas fa-external-link-alt"></i> Voir démo</a>
+                        <a href="assessts/python/jeux_devinette/jeux_devinette.exe"><i class="fas fa-external-link-alt"></i> Voir démo</a>
   
                     </div>
                 </div>
             </div>
-
-
         </div>
     </section>
 
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-form">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Sujet</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Envoyer le message</button>
+            </form>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
         <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://tinyurl.com/ntuSyfc2" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/hiba997ugu" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:marzakhiba80@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+212775641201"><i class="fas fa-phone"> </i></a>
         </div>
-        <p class="copyright">© 2023 MonPortfolio. Tous droits réservés.</p>
+        <p class="copyright">© 2024 Marzak Hiba. Tous droits réservés.</p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem;">Stagiaire en Développement Full Stack | Recherche de stage PFE</p>
     </footer>
 
     <script>
@@ -821,10 +984,8 @@
         const navLinks = document.querySelectorAll('.nav-links li');
 
         burger.addEventListener('click', () => {
-            // Toggle Nav
             nav.classList.toggle('nav-active');
             
-            // Animation des liens
             navLinks.forEach((link, index) => {
                 if (link.style.animation) {
                     link.style.animation = '';
@@ -833,7 +994,6 @@
                 }
             });
             
-            // Animation du burger
             burger.classList.toggle('toggle');
         });
 
@@ -888,9 +1048,7 @@
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Retire la classe active de tous les boutons
                 filterBtns.forEach(btn => btn.classList.remove('active'));
-                // Ajoute la classe active au bouton cliqué
                 btn.classList.add('active');
                 
                 const filter = btn.getAttribute('data-filter');
@@ -905,7 +1063,6 @@
                             card.style.display = 'none';
                         }
                     }
-                    // Animation de réapparition
                     if (card.style.display === 'block') {
                         card.style.animation = 'fadeIn 0.5s ease';
                     }
@@ -914,15 +1071,11 @@
         });
 
         // Gestion du formulaire de contact
-        const contactForm = document.getElementById('form-contact');
+        const contactForm = document.getElementById('contactForm');
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 
-                // Ici vous pourriez ajouter du code pour envoyer le formulaire
-                // Par exemple avec fetch() ou XMLHttpRequest
-                
-                // Simulation d'envoi réussi
                 alert('Merci pour votre message! Je vous répondrai dès que possible.');
                 this.reset();
             });
